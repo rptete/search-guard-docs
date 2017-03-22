@@ -153,7 +153,7 @@ searchguard.multitenancy.enabled: true
 In addition, Kibana requires you to whitelist all HTTP headers that should be passed from Kibana to Elasticsearch. The multi tenancy feature uses one specific header, named sg_tenant. Add this header to the white list:
 
 ```
-elasticsearch.requestHeadersWhitelist: ["sg_tenant", ..., ...]
+elasticsearch.requestHeadersWhitelist: [ 'authorization', 'sg_tenant', '...' ]
 ```
 
 Check that both the Kibana server user and the Kibana index name matches in both kibana.yml and sg_config. The contents of the following keys must match:
